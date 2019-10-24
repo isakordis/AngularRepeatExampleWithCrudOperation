@@ -5,16 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { EnviromentURLService } from './shared/services/enviroment-url.service';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient,HttpHeaders, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent
   ],
   imports: [
-    HttpClient,
+    
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,// Httpclientmodule bunun sayesinde ortadan kalkmıstır.
   ],
   providers: [EnviromentURLService],
   bootstrap: [AppComponent]
