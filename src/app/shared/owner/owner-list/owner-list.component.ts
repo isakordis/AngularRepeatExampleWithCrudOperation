@@ -12,7 +12,7 @@ export class OwnerListComponent implements OnInit {
   
   public owner:Owner[];
   constructor( public router:Router,public Repo :RepoService) { }
-ownert:Owner[];
+
  
 
   ngOnInit() {
@@ -28,6 +28,15 @@ ownert:Owner[];
     let detailsUrl:string = `owner/details/${id}`
     this.router.navigate([detailsUrl]);
     
+  }
+
+  redirectToUpdatePage(id){
+  let updateUrl:string=`owner/update/${id}`;
+    this.router.navigate([updateUrl]);
+  }
+  redirectToDeletePage(id){
+    let deleteUrl:string=`owner/delete/${id}`;
+    this.router.navigate([deleteUrl]);
   }
 
 }

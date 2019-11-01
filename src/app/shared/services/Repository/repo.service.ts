@@ -20,7 +20,7 @@ export class RepoService {
   public Update(route:string,body){
     return this.http.put(this.createCompleteRoute(route,this.envURL.urlAdress),body,this.generateHeaders())
   }
-  public Delete(route:string,body){
+  public Delete(route:string){
     return this.http.delete(this.createCompleteRoute(route,this.envURL.urlAdress))
   }
 
